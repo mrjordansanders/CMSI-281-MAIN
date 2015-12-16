@@ -1,7 +1,7 @@
 import java.util.HashMap;
+import java.util.TreeMap;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 
 public class WordFrequencies extends java.lang.Object{
     public static HashMap<String, Long> generateFrequencyList() throws java.io.IOException {
@@ -45,11 +45,15 @@ public class WordFrequencies extends java.lang.Object{
 
     public static void main(java.lang.String[] args){
         ArrayList<String> j = new ArrayList<String>(Arrays.asList(args));
+        TreeMap<String, Long> alphabetizedMap = new TreeMap<String, Long>();
+
         if(j.contains("-c") && j.contains("-s")){
             try {
                 HashMap<String, Long> freqMap = generateFrequencyListLowerCase();
+                
+                alphabetizedMap.putAll(freqMap);
 
-                for (String key : freqMap.keySet()) {
+                for (String key : alphabetizedMap.keySet()) {
                     System.out.println(key);    
                 }
             } catch (Exception e) {
@@ -59,8 +63,10 @@ public class WordFrequencies extends java.lang.Object{
             try {
                 HashMap<String, Long> freqMap = generateFrequencyListLowerCase();
 
-                for (String key : freqMap.keySet()) {
-                    System.out.println(key+"\t"+freqMap.get(key));    
+                alphabetizedMap.putAll(freqMap);
+
+                for (String key : alphabetizedMap.keySet()) {
+                    System.out.println(key+"\t"+alphabetizedMap.get(key));    
                 }
             } catch (Exception e) {
                 e.printStackTrace();
@@ -69,7 +75,9 @@ public class WordFrequencies extends java.lang.Object{
             try {
                 HashMap<String, Long> freqMap = generateFrequencyList();
 
-                for (String key : freqMap.keySet()) {
+                alphabetizedMap.putAll(freqMap);
+
+                for (String key : alphabetizedMap.keySet()) {
                     System.out.println(key);    
                 }
             } catch (Exception e) {
@@ -79,8 +87,10 @@ public class WordFrequencies extends java.lang.Object{
             try {
                 HashMap<String, Long> freqMap = generateFrequencyList();
 
-                for (String key : freqMap.keySet()) {
-                    System.out.println(key+"\t"+freqMap.get(key));    
+                alphabetizedMap.putAll(freqMap);
+
+                for (String key : alphabetizedMap.keySet()) {
+                    System.out.println(key+"\t"+alphabetizedMap.get(key));    
                 }
             } catch (Exception e) {
                 e.printStackTrace();
