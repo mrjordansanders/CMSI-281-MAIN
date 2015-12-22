@@ -6,3 +6,6 @@ NumberList: 9/47
 LinkedDeque: 19/35
   * left()/right() methods should be returning the Objects themselves, not the Nodes.
   * Method names should be in the form camelCase, not CamelCase.
+
+Binary Tree: 19.5/45
+ * Late submission
