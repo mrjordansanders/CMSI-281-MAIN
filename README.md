@@ -9,3 +9,6 @@ LinkedDeque: 19/35
 
 Binary Tree: 19.5/45
  * Late submission
+
+WordFrequencies: 30/35
+ * -s implementation is incorrect, formatting is slightly off, does not capture numbers
